@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ### SYNOPSIS
 
-Usage: gps_extractor.rb [options] [/target/folder/path]
+Usage: ruby lib/gps_extractor.rb [options] [/target/folder/path]
 
 
 ## Usage
