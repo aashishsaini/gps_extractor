@@ -1,7 +1,7 @@
 # GpsExtractor
 A command line utility that finds all JPEGs inside of a folder
 recursively and extracts their EXIF GPS data if present. It will default to
-scanning the pwd/tmp unless a directory is provided as an argument.
+scanning the pwd/tmp/output unless a directory is provided as an argument.
 
 Results are written to a file in the pwd as the scan runs. CSV files will be
 produced by default, use -html for HTML files instead. If the app is not
@@ -39,7 +39,7 @@ Usage: ruby lib/gps_extractor.rb [options] [/target/folder/path]
 
 ### OUTPUT
 
-The output file is created in the pwd/tmp, which requires write permission.
+The output file is created in the pwd/tmp/output, which requires write permission.
 
 `{folder_name}_{timestamp}.{csv|html}`
 
