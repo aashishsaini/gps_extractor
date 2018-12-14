@@ -10,22 +10,9 @@ from outside the app folder.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Clone the repo:
 
-```ruby
-gem 'gps_extractor'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install gps_extractor
-
-Or clone the repo:
-
+    $ cd gps_extractor
     $ bundle install
     $ ruby lib/gps_extractor.rb
 
