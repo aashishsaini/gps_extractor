@@ -2,10 +2,11 @@ $LOAD_PATH << File.expand_path(File.dirname(__FILE__) + '/../lib')
 
 require 'erb'
 require 'gps_extractor/version'
+require 'fileutils'
 
 module Template
-
-
+  OutPutDir = "output"
+  Dir.mkdir(OutPutDir) unless File.exists?(OutPutDir)
   # handles creating and writing CSV output files
   class Csv
     attr_reader :file_name
@@ -13,7 +14,7 @@ module Template
     # dir: basename of root directory
     # attr_labels: array of attributes labels as strings
     def initialize(dir, attr_labels)
-      @file_name = "tmp/output/#{dir}_#{Time.now.to_i}.csv"
+      @file_name = "#{Template::OutPutDir}/#{dir}_#{Time.now.to_i}.csv"
       @file = File.new(@file_name, 'w')
       @file.puts(attr_labels.join(','))
     end
@@ -36,7 +37,7 @@ module Template
     # dir: basename of root directory
     # attr_labels: array of attributes labels as strings
     def initialize(dir, attr_labels)
-      @file_name = "tmp/output/#{dir}_#{Time.now.to_i}.html"
+      @file_name = "#{Template::OutPutDir}/#{dir}_#{Time.now.to_i}.html"
       @file = File.new(@file_name, 'w')
       @template_path = set_template_path
       append_header(dir, attr_labels)
