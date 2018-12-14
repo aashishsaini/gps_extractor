@@ -1,7 +1,7 @@
 # GpsExtractor
 A command line utility that finds all JPEGs inside of a folder
 recursively and extracts their EXIF GPS data if present. It will default to
-scanning the pwd unless a directory is provided as an argument.
+scanning the pwd/tmp unless a directory is provided as an argument.
 
 Results are written to a file in the pwd as the scan runs. CSV files will be
 produced by default, use -html for HTML files instead. If the app is not
