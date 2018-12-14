@@ -24,6 +24,11 @@ Or install it yourself as:
 
     $ gem install gps_extractor
 
+Or clone the repo:
+
+    $ bundle install
+    $ ruby lib/gps_extractor.rb
+
 ### SYNOPSIS
 
 Usage: gps_extractor.rb [options] [/target/folder/path]
